@@ -3,7 +3,15 @@
 namespace Core;
 
 class View {
+    protected static $globals = [];
+
+    public static function share(string $key, mixed $value): void {
+        static::$globals[$key] = $value;
+    }
+
     public static function render(string $template, array $data = [], ?string $layout = null):string {
+        $data = [...static::$globals,...$data];    
+
         $content = static::renderTemplate(
             $template, 
             $data
@@ -14,6 +22,10 @@ class View {
             $data, 
             $content
         );
+    }
+
+    public static function partial(string $template, array $data = []): string {
+        return static::renderTemplate("/partials/$template", $data);
     }
 
     protected static function renderTemplate(string $template, array $data ):string {

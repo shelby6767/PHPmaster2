@@ -1,6 +1,3 @@
-<div>
-    <strong>Hello</strong>
-    <div>
-        <?= $message ?>
-    </div>
-</div>
+<h2>Recent Posts</h2>
+
+<?= partial('_posts', ['posts' => $posts]) ?>

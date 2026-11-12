@@ -13,9 +13,15 @@ class Router {
         ];
     }
 
-    public function notFound(): void {
+    public static function notFound(): void {
         http_response_code(404);
-        echo "404 Not Found";
+        echo View::render('errors/404');
+        exit;
+    }
+
+    public static function pageExpired():void {
+        http_response_code(419);
+        echo View::render('errors/419');
         exit;
     }
 
@@ -23,7 +29,7 @@ class Router {
         $route = $this->findRoute($uri, $method);
 
         if(!$route) {
-            return $this->notFound();
+            return static::notFound();
         }   
         //PostController@index
         //PostController@show
@@ -66,5 +72,10 @@ class Router {
     protected function callAction(string $controller, string $action, array $params): string {
         $controllerClass = "App\\Controller\\$controller";
         return (new $controllerClass)->$action(...$params);
+    }
+
+    public static function redirect(string $uri): void {
+        header("Location: $uri");
+        exit();
     }
 }

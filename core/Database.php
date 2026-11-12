@@ -1,4 +1,11 @@
 <?php
+namespace Core;
+
+use Exception;
+use PDO;
+use PDOException;
+use PDOStatement;
+
 class Database {
     protected $pdo;
 
@@ -36,13 +43,20 @@ class Database {
         return $stmnt;
     }
 
-    public function fetchAll(string $sql, array $params = []): array {
-       return $this->query($sql, $params)->fetchAll(PDO::FETCH_OBJ);
-    }
+  public function fetchAll(string $sql, array $params = [], ?string $className = null): array {
+    $stmt = $this->query($sql, $params);
+    return $className 
+      ? $stmt->fetchAll(PDO::FETCH_CLASS, $className)
+      : $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 
-    public function fetch(string $sql, array $params = []): object|false {
-        return $this->query($sql, $params)->fetch(PDO::FETCH_OBJ);
-    }
+    public function fetch(string $sql, array $params = [], ?string $className = null): mixed {
+    $stmt = $this->query($sql, $params);
+    $stmt->setFetchMode(
+      $className ? PDO::FETCH_CLASS : PDO::FETCH_ASSOC, $className
+    );
+    return $stmt->fetch();
+  }
 
     public function lastInsertId(): string|false {
         return $this->pdo->lastInsertId();

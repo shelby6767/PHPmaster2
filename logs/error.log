@@ -1,0 +1,34 @@
+[2026-11-11 02:46:49] Error: Exception: this should go to log in C:\laragon\www\PHPmaster2\bin\schema_load.php on line 10
+[2026-11-11 03:01:20] Error: Error: Class "App\Controller\Exception" not found in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 9
+[2026-11-11 03:02:32] Error: Error: Class "App\Controller\Exception" not found in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 10
+[2026-11-11 03:04:04] Error: Exception: This has happened on the web! in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 11
+[2026-11-11 03:04:06] Error: Exception: This has happened on the web! in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 11
+[2026-11-11 03:04:07] Error: Exception: This has happened on the web! in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 11
+[2026-11-11 03:04:07] Error: Exception: This has happened on the web! in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 11
+[2026-11-11 03:11:34] Error: Error: Class "App\Controller\User" not found in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 11
+[2026-11-11 03:13:26] Error: Error: Class "App\Model\User" not found in C:\laragon\www\PHPmaster2\app\Controller\HomeController.php on line 12
+[2026-11-11 03:18:11] Error: Error: Class "Core\PDO" not found in C:\laragon\www\PHPmaster2\core\Model.php on line 17
+[2026-11-11 03:19:36] Error: PDOException: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email in C:\laragon\www\PHPmaster2\core\Database.php on line 42
+[2026-11-11 03:22:54] Error: PDOException: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: users.email in C:\laragon\www\PHPmaster2\core\Database.php on line 42
+[2026-11-11 03:55:56] Error: Error: Class "App\Models\App" not found in C:\laragon\www\PHPmaster2\app\Models\Post.php on line 11
+[2026-11-11 04:08:22] Error: ErrorException: Creation of dynamic property App\Models\Post::$CONTENT is deprecated in C:\laragon\www\PHPmaster2\core\Database.php on line 49
+[2026-11-11 04:11:12] Error: ErrorException: Creation of dynamic property App\Models\Post::$CONTENT is deprecated in C:\laragon\www\PHPmaster2\core\Database.php on line 49
+[2026-11-11 04:11:32] Error: ErrorException: Creation of dynamic property App\Models\Post::$CONTENT is deprecated in C:\laragon\www\PHPmaster2\core\Database.php on line 49
+[2026-11-11 04:17:04] Error: ErrorException: Creation of dynamic property App\Models\Post::$CONTENT is deprecated in C:\laragon\www\PHPmaster2\core\Database.php on line 49
+[2026-11-11 04:17:19] Error: ErrorException: Creation of dynamic property App\Models\Post::$CONTENT is deprecated in C:\laragon\www\PHPmaster2\core\Database.php on line 49
+[2026-11-11 04:19:01] Error: PDOException: SQLSTATE[HY000]: General error: 1 no such table: posts in C:\laragon\www\PHPmaster2\core\Database.php on line 41
+[2026-11-11 04:19:30] Error: TypeError: PDOStatement::fetch(): Argument #2 ($cursorOrientation) must be of type int, string given in C:\laragon\www\PHPmaster2\core\Database.php on line 56
+[2026-11-11 04:22:12] Error: ErrorException: Creation of dynamic property App\Models\User::$id is deprecated in C:\laragon\www\PHPmaster2\core\Database.php on line 62
+[2026-11-11 07:35:13] Error: ErrorException: Undefined variable $search in C:\laragon\www\PHPmaster2\app\Views\posts\index.php on line 5
+[2026-11-11 07:35:43] Error: ErrorException: Undefined variable $search in C:\laragon\www\PHPmaster2\app\Views\posts\index.php on line 5
+[2026-11-11 07:37:27] Error: ErrorException: Undefined variable $search in C:\laragon\www\PHPmaster2\app\Views\posts\index.php on line 5
+[2026-11-11 07:45:37] Error: TypeError: Core\Database::fetchAll(): Argument #3 ($className) must be of type ?string, array given, called in C:\laragon\www\PHPmaster2\app\Models\Post.php on line 37 in C:\laragon\www\PHPmaster2\core\Database.php on line 46
+[2026-11-11 08:01:03] Error: Error: Class "View" not found in C:\laragon\www\PHPmaster2\app\Views\posts\index.php on line 9
+[2026-11-11 08:04:34] Error: Error: Class "partial" not found in C:\laragon\www\PHPmaster2\app\Views\posts\index.php on line 9
+[2026-11-11 08:05:51] Error: Error: Class "partial" not found in C:\laragon\www\PHPmaster2\app\Views\home\index.php on line 4
+[2026-11-11 08:15:03] Error: Error: Class "partial" not found in C:\laragon\www\PHPmaster2\app\Views\home\index.php on line 4
+[2026-11-12 04:11:20] Error: Error: Class "App\Models\App" not found in C:\laragon\www\PHPmaster2\app\Models\User.php on line 17
+[2026-11-12 04:12:25] Error: Error: Class "App\Controller\Router" not found in C:\laragon\www\PHPmaster2\app\Controller\AuthController.php on line 21
+[2026-11-12 07:07:28] Error: Error: Array callback must have exactly two elements in C:\laragon\www\PHPmaster2\app\Services\RememberMe.php on line 37
+[2026-11-12 07:07:33] Error: Error: Array callback must have exactly two elements in C:\laragon\www\PHPmaster2\app\Services\RememberMe.php on line 37
+[2026-11-12 07:19:59] Error: ErrorException: Undefined variable $token in C:\laragon\www\PHPmaster2\app\Services\RememberMe.php on line 41
